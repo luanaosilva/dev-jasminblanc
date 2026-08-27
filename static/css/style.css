@@ -1,682 +1,308 @@
-
-* {
+* header {
+    background-image: url('../img/florido.png');
+    background-repeat: no-repeat;
+    background-position: center;
     box-sizing: border-box;
-}
+    position: relative;
+    display: flex;
 
+    align-items: center;
+}
 
 body {
+    background-image: url('../img/12.png'), url('../img/13.png');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 600px, 600px; 
     margin: 0;
-
     padding: 0;
-
     background-color: #fffde8;
-
     color: #333;
-
     font-family: Arial, sans-serif;
-}
 
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-header {
-
-    height: 65px;
-
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    background-color: #e8e5d0;
-
-    border-bottom: 1px solid #d4c79d;
 
 }
 
-
-/* decoração floral */
 
 .decoracao-header {
-
     position: absolute;
-
     top: -19px;
-
     left: 0;
-
     width: 100%;
-
     text-align: center;
-
     color: #d1c798;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: 42px;
-
     letter-spacing: 18px;
-
     opacity: 0.45;
-
     pointer-events: none;
-
 }
-
-
-/* =====================================================
-   TÍTULO DO HEADER
-===================================================== */
 
 .titulo-header {
-
     width: 80%;
-
     max-width: 850px;
-
     height: 40px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     position: relative;
-
     z-index: 2;
-
-    background-color: rgba(115, 115, 90, 0.65);
-
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-
+    background-color: rgba(255, 255, 255, 0.663);
+    box-shadow: 0 2px 5px rgba(240, 239, 239, 0.753);
 }
-
 
 .titulo-header h1 {
-
     margin: 0;
-
     padding: 0;
-
-    color: #ffffff;
-
+    color: #0f0d0d;
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: 15px;
-
     font-weight: normal;
-
     text-transform: uppercase;
-
     letter-spacing: 1px;
-
 }
-
-
-
-/* =====================================================
-   MAIN
-===================================================== */
 
 main.container {
-
     max-width: 1050px;
-
     min-height: 750px;
-
     padding-top: 55px;
-
     padding-bottom: 45px;
-
     position: relative;
-
     overflow: hidden;
-
 }
-
-
-
-/* =====================================================
-   DECORAÇÃO FLORAL DO MAIN
-===================================================== */
 
 main.container::before {
 
-    content: "❀";
-
     position: absolute;
-
     left: -45px;
-
     top: 15px;
-
     font-size: 160px;
-
     font-family: Georgia, "Times New Roman", serif;
-
     color: #e49aae;
-
     opacity: 0.28;
-
     transform: rotate(-20deg);
-
     z-index: 0;
-
 }
-
 
 main.container::after {
-
-    content: "❀";
-
     position: absolute;
-
     right: -45px;
-
     bottom: 0;
-
     font-size: 160px;
-
     font-family: Georgia, "Times New Roman", serif;
-
     color: #e49aae;
-
     opacity: 0.28;
-
     transform: rotate(20deg);
-
     z-index: 0;
-
 }
-
-
-
-/* =====================================================
-   GRID
-===================================================== */
 
 main .row {
-
     position: relative;
-
     z-index: 2;
-
 }
-
-
-
-/* =====================================================
-   COLUNAS
-===================================================== */
 
 .col-md-4 {
-
     padding-left: 18px;
-
     padding-right: 18px;
-
 }
-
-
-
-/* =====================================================
-   CARDS
-===================================================== */
 
 .card {
-
     width: 100%;
-
     min-height: 300px;
-
     background-color: #fffdf1;
-
     border: 1px solid #df91a8;
-
     border-radius: 0;
-
     overflow: hidden;
-
     box-shadow:
         2px 3px 7px rgba(0, 0, 0, 0.20);
-
     transition: all 0.3s ease;
-
 }
-
-
-/* efeito ao passar o mouse */
 
 .card:hover {
-
     transform: translateY(-5px);
-
     border-color: #d47791;
-
     box-shadow:
         3px 6px 12px rgba(0, 0, 0, 0.25);
-
 }
-
-
-
-/* =====================================================
-   IMAGENS DOS CARDS
-===================================================== */
 
 .card-img-top {
-
-    width: 105px;
-
-    height: 75px;
-
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-
     display: block;
-
     margin: 12px auto 6px;
-
     border-radius: 13px;
-
     background-color: #ffffff;
-
 }
-
-
-
-/* =====================================================
-   CORPO DOS CARDS
-===================================================== */
 
 .card-body {
-
     padding: 5px 12px 12px;
-
     text-align: center;
-
 }
-
-
-
-/* =====================================================
-   NOME DAS FLORES
-===================================================== */
 
 .card-body h3 {
-
     margin: 3px 0;
-
     padding: 0;
-
     color: #555555;
-
     font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 12px;
-
+    font-size: 18px;
     font-style: italic;
-
     font-weight: normal;
-
     text-transform: uppercase;
-
 }
-
-
-
-/* =====================================================
-   SIGNIFICADO
-===================================================== */
 
 .card-body h4 {
-
     margin: 0 0 8px;
-
     padding: 0;
-
     color: #c49c27;
-
     font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 9px;
-
+    font-size: 15px;
     font-weight: normal;
-
 }
-
-
-
-/* =====================================================
-   TEXTO DOS CARDS
-===================================================== */
 
 .card-body p {
-
     max-width: 175px;
-
     margin: 0 auto;
-
     padding: 0;
-
     color: #222222;
-
-    font-size: 9px;
-
+    font-size: 10px;
     line-height: 1.35;
-
     text-align: left;
-
 }
-
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
 
 footer {
-
     min-height: 90px;
-
     position: relative;
-
     overflow: hidden;
-
     padding: 12px 0;
-
-    background-color: #ffffff;
-
+    background-color: #7F9660;
     border-top: 1px solid #e1dccb;
-
 }
-
-
-
-/* =====================================================
-   DECORAÇÃO DO FOOTER
-===================================================== */
 
 .decoracao-footer {
-
     position: absolute;
-
     left: -10px;
-
     bottom: -23px;
-
     color: #d7cda9;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: 55px;
-
     letter-spacing: 15px;
-
     opacity: 0.4;
-
     transform: rotate(-10deg);
-
 }
-
 
 footer::after {
-
-    content: "❀ ❁";
-
     position: absolute;
-
     right: -10px;
-
     bottom: -25px;
-
     color: #dba0ae;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: 55px;
-
     letter-spacing: 10px;
-
     opacity: 0.35;
-
     transform: rotate(15deg);
-
 }
-
-
-
-/* =====================================================
-   CONTEÚDO DO FOOTER
-===================================================== */
 
 footer .container {
-
     position: relative;
-
     z-index: 2;
-
 }
-
-
-
-/* =====================================================
-   CNPJ
-===================================================== */
 
 .footer-cnpj {
-
     color: #555555;
-
     font-size: 8px;
-
 }
-
 
 .footer-cnpj small {
-
     font-size: 7px;
-
 }
-
-
-
-/* =====================================================
-   COPYRIGHT
-===================================================== */
 
 .footer-copy {
-
     color: #555555;
-
 }
-
 
 .footer-copy small {
-
     font-size: 7px;
-
 }
-
-
-
-/* =====================================================
-   CONTATOS
-===================================================== */
 
 .contatos {
-
     color: #444444;
-
     font-size: 8px;
-
     line-height: 1;
-
 }
-
 
 .contatos p {
-
     margin: 3px 0;
-
     padding: 0;
-
 }
-
-
-
-/* =====================================================
-   ÍCONE WHATSAPP
-===================================================== */
 
 .whatsapp {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     width: 15px;
-
     height: 15px;
-
     margin-right: 5px;
-
     color: #1db954;
-
     font-size: 10px;
-
 }
-
-
-
-/* =====================================================
-   ÍCONE INSTAGRAM
-===================================================== */
 
 .instagram {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     width: 15px;
-
     height: 15px;
-
     margin-right: 5px;
-
     color: #d82b70;
-
     font-size: 10px;
-
 }
-
-
-
-/* =====================================================
-   ÍCONE EMAIL
-===================================================== */
 
 .email {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     width: 15px;
-
     height: 15px;
-
     margin-right: 5px;
-
     color: #d94d4d;
-
     font-size: 10px;
-
 }
 
-
-
-/* =====================================================
-   RESPONSIVIDADE
-===================================================== */
-
 @media (max-width: 767px) {
-
     header {
-
         height: 60px;
-
     }
-
 
     .titulo-header {
-
         width: 90%;
-
     }
-
 
     .titulo-header h1 {
-
         font-size: 13px;
-
     }
-
 
     main.container {
-
         padding-top: 35px;
-
         padding-bottom: 35px;
-
     }
-
 
     .card {
-
         width: 230px;
-
         min-height: 300px;
-
         margin-left: auto;
-
         margin-right: auto;
-
     }
-
 
     .col-md-4 {
-
         padding-left: 10px;
-
         padding-right: 10px;
-
     }
-
 
     .footer-cnpj,
     .footer-copy,
     .contatos {
-
         text-align: center;
-
         margin-bottom: 8px;
-
     }
-
 }
