@@ -1,678 +1,582 @@
-:root {
-    --creme: #fffaf5;
-    --fundo: #fffdfb;
-    --verde-salvia: #8fa58f;
-    --verde-escuro: #405441;
-    --rosa: #f4b6c2;
-    --coral: #e98f8f;
-    --lima: #d9e8a3;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    background: var(--fundo);
-    color: var(--verde-escuro);
-    font-family: Georgia, "Times New Roman", serif;
-}
-
-.hero-linguagem {
-    min-height: 600px;
-    background: linear-gradient(
-        135deg,
-        #fffaf5 0%,
-        #fff4f5 50%,
-        #f6eee8 100%
-    );
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 20px;
-}
-
-.hero-conteudo {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    text-align: center;
-}
-
-.tag-linguagem {
-    display: inline-block;
-    background: var(--rosa);
-    color: var(--verde-escuro);
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.hero-conteudo h1 {
-    font-size: 58px;
-    line-height: 1.1;
-    margin-bottom: 25px;
-    color: var(--verde-escuro);
-}
-
-.hero-conteudo p {
-    font-size: 18px;
-    line-height: 1.7;
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.decoracao-floral {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
-
-.flores-decorativas {
-    position: absolute;
-    inset: 0;
-}
-
-.flor-1,
-.flor-2,
-.flor-3 {
-    position: absolute;
-    opacity: 0.7;
-}
-
-.flor-1 {
-    width: 180px;
-    left: 5%;
-    top: 15%;
-    transform: rotate(-15deg);
-}
-
-.flor-2 {
-    width: 150px;
-    right: 8%;
-    top: 20%;
-    transform: rotate(20deg);
-}
-
-.flor-3 {
-    width: 170px;
-    left: 12%;
-    bottom: 5%;
-    transform: rotate(15deg);
-}
-
-.pesquisa-section {
-    max-width: 1100px;
-    margin: 70px auto;
-    padding: 50px 40px;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid #e5ddd7;
-    border-radius: 25px;
-    box-shadow: 0 10px 35px rgba(64, 84, 65, 0.08);
-}
-
-.pesquisa-box {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.icone-pesquisa {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto 15px;
-    border-radius: 50%;
-    background: #f5bfd0;
-    color: var(--verde-escuro);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-}
-
-.pesquisa-box h2 {
-    margin-bottom: 10px;
-    color: var(--verde-escuro);
-}
-
-.pesquisa-box p {
-    margin: 0;
-    color: #777;
-    font-size: 14px;
-}
-
-.pesquisa-section .row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin: 0;
-}
-
-.pesquisa-section .row > div {
-    width: 100%;
-    padding: 0;
-}
-
-.pesquisa-section .d-flex {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    min-height: 180px;
-}
-
-.pesquisa-section .florr {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 12px;
-    flex-shrink: 0;
-    box-shadow: 0 5px 15px rgba(64, 84, 65, 0.12);
-}
-
-.pesquisa-section .d-flex > div {
-    flex: 1;
-    min-width: 0;
-}
-
-.pesquisa-section h5 {
-    margin: 0 0 8px;
-    color: var(--verde-escuro);
-    font-size: 22px;
-}
-
-.pesquisa-section p {
-    margin: 0 0 5px;
-    color: #666;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.pesquisa-section p strong {
-    color: var(--verde-escuro);
-}
-
-.sentimentos-section {
-    padding: 80px 20px;
-    background: #f8f2ed;
-}
-
-.titulo-secao {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 50px;
-}
-
-.titulo-secao h2 {
-    color: var(--verde-escuro);
-    margin-bottom: 15px;
-}
-
-.titulo-secao p {
-    color: #777;
-    line-height: 1.6;
-}
-
-.sentimento-card {
-    height: 100%;
-    padding: 35px 25px;
-    background: #fff;
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid #eee3dc;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sentimento-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(64, 84, 65, 0.1);
-}
-
-.icone-sentimento {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    background: #f5d3da;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-}
-
-.sentimento-card h3 {
-    color: var(--verde-escuro);
-    margin-bottom: 12px;
-    font-size: 22px;
-}
-
-.sentimento-card p {
-    color: #777;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.combinacao-section {
-    padding: 90px 20px;
-    background: var(--creme);
-}
-
-.combinacao {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.combinacao-texto {
-    flex: 1;
-}
-
-.combinacao-texto h2 {
-    color: var(--verde-escuro);
-    margin-bottom: 20px;
-    font-size: 38px;
-}
-
-.combinacao-texto p {
-    color: #666;
-    line-height: 1.7;
-    margin-bottom: 25px;
-}
-
-.btn-combinacao {
-    display: inline-block;
-    padding: 13px 25px;
-    border-radius: 30px;
-    background: var(--verde-salvia);
-    color: white;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-.btn-combinacao:hover {
-    background: var(--verde-escuro);
-    color: white;
-    transform: translateY(-2px);
-}
-
-.flores-combinacao {
-    flex: 1;
-    min-height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.flor-combinacao {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(64, 84, 65, 0.15);
-}
-
-.flor-rosa {
-    transform: rotate(-8deg);
-}
-
-.flor-girassol {
-    transform: rotate(8deg);
-}
-
-.flor-margarida {
-    transform: rotate(-5deg);
-}
-
-.sinal {
-    font-size: 30px;
-    color: var(--verde-salvia);
-}
-
-.igual {
-    font-size: 30px;
-    color: var(--coral);
-}
-
-.mensagem-combinacao {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    color: var(--verde-escuro);
-    font-size: 18px;
-}
-
-.final-linguagem {
-    padding: 100px 20px;
-    background: linear-gradient(
-        135deg,
-        #fff8f4,
-        #f9eeee
-    );
-    text-align: center;
-}
-
-.final-conteudo {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.final-flor {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 25px rgba(64, 84, 65, 0.15);
-}
-
-.final-conteudo h2 {
-    color: var(--verde-escuro);
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.final-conteudo p {
-    color: #666;
-    line-height: 1.7;
-    margin-bottom: 30px;
-}
-
-.btn-final {
-    display: inline-block;
-    padding: 14px 30px;
-    border-radius: 30px;
-    background: var(--coral);
-    color: white;
-    cursor: pointer;
-    list-style: none;
-    transition: 0.3s ease;
-}
-
-.btn-final:hover {
-    background: #d97878;
-}
-
-.btn-final::-webkit-details-marker {
-    display: none;
-}
-
-.presente-sem-js {
-    margin-top: 25px;
-}
-
-.presente-sem-js p {
-    margin-top: 20px;
-}
-
-.flores-final {
-    max-width: 1000px;
-    margin: 50px auto 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.flor-final-item {
-    background: white;
-    padding: 15px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px rgba(64, 84, 65, 0.08);
-}
-
-.flor-final-item img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.flor-final-item p {
-    margin: 12px 0 0;
-    color: var(--verde-escuro);
-}
-
-footer {
-    background: var(--verde-escuro);
-    color: white;
-    padding: 50px 20px 20px;
-    text-align: center;
-}
-
-.footer-logo {
-    margin-bottom: 20px;
-}
-
-.footer-logo .flor-logo {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-}
-
-.footer-text {
-    max-width: 500px;
-    margin: 0 auto 25px;
-    color: #e9eee9;
-    line-height: 1.6;
-}
-
-.redes-sociais {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.redes-sociais a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-.redes-sociais a:hover {
-    color: var(--rosa);
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 20px;
-    color: #d7ded7;
-    font-size: 13px;
-}
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+:root{
+    --creme:#FFFBE0;
+    --fundo:#FFFDF5;
+    --verde-salvia:#799D6E;
+    --verde-escuro:#3F4A3C;
+    --rosa:#F8C8DC;
+    --coral:#EC8C8C;
+    --lima:#F6FF97;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    color:var(--verde-escuro);
+    background:linear-gradient(135deg,#fffbe0 0%,#fff5ec 45%,#f8c8dc 100%);
+    background-attachment:fixed;
+}
+.hero-linguagem{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding:80px 0 90px;
+}
+.hero-conteudo{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+.tag-linguagem{
+    display:inline-block;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:3px;
+    color:var(--verde-salvia);
+    margin-bottom:22px;
+}
+.hero-conteudo h1{
+    font-family:Georgia,serif;
+    font-size:52px;
+    line-height:1.12;
+    color:var(--verde-escuro);
+    margin:0 auto 25px;
+}
+.hero-conteudo h1 span{
+    display:block;
+    color:var(--verde-salvia);
+}
+.hero-conteudo p{
+    max-width:650px;
+    margin:auto;
+    font-size:17px;
+    line-height:1.7;
+    color:#65705f;
+}
+.decoracao-floral{
+    margin-top:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    color:var(--coral);
+    font-size:22px;
+}
+.decoracao-floral span{
+    width:70px;
+    height:1px;
+    background:var(--coral);
+    opacity:.5;
+}
+.flores-decorativas{
+    position:absolute;
+    color:var(--rosa);
+    opacity:.7;
+    font-size:90px;
+}
+.flor-1{
+    top:35px;
+    left:7%;
+    transform:rotate(-15deg);
+}
+.flor-2{
+    right:8%;
+    top:100px;
+    font-size:65px;
+}
+.flor-3{
+    bottom:20px;
+    left:18%;
+    font-size:50px;
+}
+.pesquisa-section{
+    padding:0 0 70px;
+}
+.pesquisa-box{
+    max-width:950px;
+    margin:auto;
+    background:rgba(255,255,255,.82);
+    border:1px solid rgba(121,157,110,.18);
+    border-radius:28px;
+    padding:42px;
+    box-shadow:0 18px 45px rgba(63,74,60,.10);
+    backdrop-filter:blur(8px);
+}
+.icone-pesquisa{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:var(--rosa);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    color:var(--verde-escuro);
+    margin-bottom:18px;
+}
+.pesquisa-texto h2{
+    font-family:Georgia,serif;
+    font-size:29px;
+    margin-bottom:8px;
+}
+.pesquisa-texto p{
+    color:#747b6e;
+    margin-bottom:25px;
+}
+.flor-item{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    width:100%;
+    min-height:170px;
+    padding:20px;
+    background:rgba(255,255,255,.75);
+    border:1px solid rgba(121,157,110,.15);
+    border-radius:20px;
+}
+.florr{
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:50%;
+    flex-shrink:0;
+}
+.flor-info{
+    flex:1;
+}
+.flor-info h5{
+    font-family:Georgia,serif;
+    font-size:23px;
+    margin:0 0 8px;
+    color:var(--verde-escuro);
+}
+.flor-info p{
+    color:#777e73;
+    font-size:14px;
+    line-height:1.6;
+    margin:0;
+}
+.campo-pesquisa{
+    display:flex;
+    background:#fff;
+    border:1px solid #e2e6d9;
+    border-radius:14px;
+    padding:6px;
+    transition:.3s;
+}
+.campo-pesquisa:focus-within{
+    border-color:var(--verde-salvia);
+    box-shadow:0 0 0 4px rgba(121,157,110,.10);
+}
+.campo-pesquisa input{
+    flex:1;
+    border:0;
+    outline:0;
+    padding:14px 18px;
+    font-size:15px;
+    color:var(--verde-escuro);
+    background:transparent;
+}
+.campo-pesquisa button{
+    border:0;
+    background:var(--verde-salvia);
+    color:white;
+    padding:0 24px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+.campo-pesquisa button:hover{
+    background:var(--verde-escuro);
+    transform:translateY(-1px);
+}
+.sugestoes{
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+    font-size:13px;
+    color:#858b80;
+}
+.sugestoes button{
+    border:1px solid #e0e6da;
+    background:#fff;
+    color:var(--verde-escuro);
+    border-radius:30px;
+    padding:7px 14px;
+    cursor:pointer;
+    transition:.3s;
+}
+.sugestoes button:hover{
+    background:var(--rosa);
+    border-color:var(--rosa);
+}
+.resultado-section{
+    display:none;
+    padding:10px 0 80px;
+}
+.resultado-section.mostrar{
+    display:block;
+    animation:aparecer .6s ease;
+}
+.resultado{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:40% 60%;
+    box-shadow:0 20px 50px rgba(63,74,60,.12);
+}
+.resultado-imagem{
+    min-height:390px;
+    background:linear-gradient(145deg,#fffbe0,#f8c8dc);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:130px;
+}
+.resultado-conteudo{
+    padding:55px;
+}
+.resultado-tag{
+    font-size:11px;
+    letter-spacing:3px;
+    color:var(--verde-salvia);
+    font-weight:bold;
+}
+.resultado-conteudo h2{
+    font-family:Georgia,serif;
+    font-size:48px;
+    margin:12px 0 15px;
+}
+.significados{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+.significados span{
+    background:var(--rosa);
+    color:var(--verde-escuro);
+    border-radius:30px;
+    padding:7px 14px;
+    font-size:12px;
+    font-weight:bold;
+}
+.descricao{
+    color:#697165;
+    line-height:1.8;
+    font-size:15px;
+}
+.frase-flor{
+    margin:25px 0;
+    padding:18px 20px;
+    background:var(--creme);
+    border-left:4px solid var(--coral);
+    font-family:Georgia,serif;
+    font-style:italic;
+    line-height:1.5;
+}
+.btn-personalizar,.btn-combinacao,.btn-final{
+    border:0;
+    background:var(--verde-escuro);
+    color:white;
+    padding:14px 22px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+.btn-personalizar:hover,.btn-combinacao:hover,.btn-final:hover{
+    background:var(--verde-salvia);
+    transform:translateY(-2px);
+}
+.sentimentos-section{
+    padding:80px 0;
+    background:rgba(255,255,255,.48);
+}
+.titulo-secao{
+    text-align:center;
+    max-width:650px;
+    margin:0 auto 45px;
+}
+.titulo-secao span{
+    font-size:11px;
+    letter-spacing:3px;
+    color:var(--verde-salvia);
+    font-weight:bold;
+}
+.titulo-secao h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+    margin:12px 0;
+}
+.titulo-secao h2 strong{
+    color:var(--coral);
+}
+.titulo-secao p{
+    color:#72796e;
+    line-height:1.7;
+}
+.sentimentos-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.sentimento-card{
+    border:1px solid rgba(121,157,110,.18);
+    background:rgba(255,255,255,.78);
+    border-radius:20px;
+    padding:28px;
+    text-align:left;
+    cursor:pointer;
+    transition:.3s;
+}
+.sentimento-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(63,74,60,.10);
+    border-color:var(--rosa);
+}
+.icone-sentimento{
+    font-size:27px;
+    margin-bottom:15px;
+}
+.sentimento-card h3{
+    font-family:Georgia,serif;
+    font-size:23px;
+    margin-bottom:8px;
+}
+.sentimento-card p{
+    color:#777e73;
+    font-size:14px;
+    line-height:1.6;
+    margin:0;
+}
+.combinacao-section{
+    padding:90px 0;
+}
+.combinacao{
+    background:var(--verde-escuro);
+    border-radius:32px;
+    padding:55px;
+    display:grid;
+    grid-template-columns:40% 60%;
+    align-items:center;
+    gap:40px;
+    overflow:hidden;
+}
+.combinacao-texto{
+    color:white;
+}
+.combinacao-texto>span{
+    color:var(--rosa);
+    font-size:10px;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+.combinacao-texto h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+    line-height:1.2;
+    margin:15px 0 20px;
+}
+.combinacao-texto h2 strong{
+    color:var(--rosa);
+}
+.combinacao-texto p{
+    color:#e5e9df;
+    line-height:1.7;
+    font-size:14px;
+}
+.btn-combinacao{
+    margin-top:15px;
+    background:var(--rosa);
+    color:var(--verde-escuro);
+}
+.flores-combinacao{
+    min-height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.flor-combinacao{
+    width:95px;
+    height:110px;
+    border-radius:50px;
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+.flor-combinacao span{
+    font-size:35px;
+}
+.flor-combinacao small{
+    margin-top:5px;
+    color:var(--verde-escuro);
+    font-weight:bold;
+}
+.sinal{
+    color:var(--rosa);
+    font-size:24px;
+}
+.igual{
+    color:white;
+    font-size:25px;
+    margin:0 8px;
+}
+.mensagem-combinacao{
+    width:170px;
+    text-align:center;
+    color:white;
+}
+.mensagem-combinacao span{
+    color:var(--rosa);
+    font-size:30px;
+}
+.mensagem-combinacao p{
+    font-family:Georgia,serif;
+    font-style:italic;
+    line-height:1.5;
+    margin:8px 0 0;
+}
+.final-linguagem{
+    padding:80px 0 100px;
+}
+.final-conteudo{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+}
+.final-flor{
+    font-size:48px;
+    color:var(--coral);
+    margin-bottom:15px;
+}
+.final-conteudo h2{
+    font-family:Georgia,serif;
+    font-size:42px;
+    line-height:1.2;
+}
+.final-conteudo h2 span{
+    display:block;
+    color:var(--verde-salvia);
+}
+.final-conteudo p{
+    color:#70786b;
+    line-height:1.7;
+    margin:20px auto 28px;
+    max-width:570px;
+}
+.btn-final{
+    padding:15px 30px;
+}
+footer{
+    padding:60px 0 20px;
+}
+@media(max-width:991px){
+    .hero-conteudo h1{
+        font-size:43px;
     }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .resultado{
+        grid-template-columns:1fr;
     }
-}
-
-.pesquisa-section,
-.sentimentos-section,
-.combinacao-section,
-.final-linguagem {
-    animation: aparecer 0.7s ease;
-}
-
-@media (max-width: 991px) {
-    .hero-conteudo h1 {
-        font-size: 45px;
+    .resultado-imagem{
+        min-height:280px;
     }
-
-    .pesquisa-section {
-        margin: 50px 20px;
-        padding: 40px 25px;
-    }
-
-    .pesquisa-section .florr {
-        width: 120px;
-        height: 120px;
-    }
-
-    .pesquisa-section .d-flex {
-        gap: 15px;
-    }
-
-    .combinacao {
-        gap: 35px;
-    }
-
-    .combinacao-texto h2 {
-        font-size: 32px;
-    }
-
-    .flor-combinacao {
-        width: 95px;
-        height: 95px;
+    .combinacao{
+        grid-template-columns:1fr;
     }
 }
-
-@media (max-width: 767px) {
-    .hero-linguagem {
-        min-height: 500px;
-        padding: 80px 20px;
+@media(max-width:767px){
+    .hero-linguagem{
+        padding:65px 0;
     }
-
-    .hero-conteudo h1 {
-        font-size: 38px;
+    .hero-conteudo h1{
+        font-size:34px;
     }
-
-    .hero-conteudo p {
-        font-size: 16px;
+    .hero-conteudo p{
+        font-size:15px;
     }
-
-    .flor-1 {
-        width: 100px;
+    .pesquisa-box{
+        padding:25px;
     }
-
-    .flor-2 {
-        width: 90px;
+    .campo-pesquisa{
+        flex-direction:column;
+        gap:6px;
     }
-
-    .flor-3 {
-        width: 100px;
+    .campo-pesquisa button{
+        min-height:48px;
     }
-
-    .pesquisa-section {
-        margin: 30px 10px;
-        padding: 30px 20px;
-        border-radius: 18px;
+    .sentimentos-grid{
+        grid-template-columns:1fr;
     }
-
-    .pesquisa-box {
-        margin-bottom: 30px;
+    .resultado-conteudo{
+        padding:35px 25px;
     }
-
-    .pesquisa-box h2 {
-        font-size: 25px;
+    .resultado-conteudo h2{
+        font-size:38px;
     }
-
-    .pesquisa-section .row {
-        grid-template-columns: 1fr;
-        gap: 25px;
+    .combinacao{
+        padding:35px 25px;
     }
-
-    .pesquisa-section .d-flex {
-        min-height: 130px;
-        gap: 15px;
-        align-items: center;
+    .combinacao-texto h2{
+        font-size:31px;
     }
-
-    .pesquisa-section .florr {
-        width: 110px;
-        height: 110px;
+    .flores-combinacao{
+        min-height:auto;
     }
-
-    .pesquisa-section h5 {
-        font-size: 19px;
+    .flor-combinacao{
+        width:75px;
+        height:90px;
     }
-
-    .pesquisa-section p {
-        font-size: 13px;
-        line-height: 1.4;
+    .flor-combinacao span{
+        font-size:28px;
     }
-
-    .sentimentos-section {
-        padding: 60px 15px;
+    .mensagem-combinacao{
+        width:100%;
+        margin-top:20px;
     }
-
-    .combinacao-section {
-        padding: 60px 20px;
+    .final-conteudo h2{
+        font-size:34px;
     }
-
-    .combinacao {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
+    .flores-decorativas{
+        display:none;
     }
-
-    .combinacao-texto h2 {
-        font-size: 30px;
+    .flor-item{
+        padding:18px;
+        gap:15px;
     }
-
-    .flores-combinacao {
-        min-height: auto;
-    }
-
-    .flor-combinacao {
-        width: 85px;
-        height: 85px;
-    }
-
-    .sinal,
-    .igual {
-        font-size: 22px;
-    }
-
-    .final-linguagem {
-        padding: 70px 20px;
-    }
-
-    .final-conteudo h2 {
-        font-size: 30px;
-    }
-
-    .flores-final {
-        grid-template-columns: 1fr;
+    .florr{
+        width:105px;
+        height:105px;
     }
 }
-
-@media (max-width: 480px) {
-    .pesquisa-section .d-flex {
-        gap: 12px;
+@media(max-width:480px){
+    .flor-item{
+        gap:12px;
     }
-
-    .pesquisa-section .florr {
-        width: 90px;
-        height: 90px;
+    .florr{
+        width:90px;
+        height:90px;
     }
-
-    .pesquisa-section h5 {
-        font-size: 17px;
+    .flor-info h5{
+        font-size:20px;
     }
-
-    .pesquisa-section p {
-        font-size: 12px;
-    }
-
-    .hero-conteudo h1 {
-        font-size: 32px;
-    }
-
-    .icone-pesquisa {
-        width: 45px;
-        height: 45px;
+    .flor-info p{
+        font-size:13px;
     }
 }
